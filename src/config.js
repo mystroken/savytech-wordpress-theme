@@ -1,11 +1,13 @@
+const path = require('path')
+
 module.exports = {
-  context: 'assets',
+  context: path.resolve(__dirname, 'assets'),
   entry: {
-    styles: './sass/main.scss',
-    scripts: './js/main.js'
+    styles: './sass/style.sass',
+    scripts: './js/app.js'
   },
-  devtool: 'cheap-module-eval-source-map',
-  outputFolder: '../assets',
+  devtool: 'cheap-source-map',
+  outputFolder: path.resolve(__dirname, '../assets'),
   publicFolder: 'assets',
   proxyTarget: 'http://savytech.local',
   watch: [

@@ -5,7 +5,7 @@
 .vscode/
 node_modules
 bower_components
-assets/dist/
+assets/
 yarn.lock
 composer.lock
 npm-debug.log
