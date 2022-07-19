@@ -18,31 +18,31 @@ $includes = array(
 	/**
 	 * Theme wrapper class
 	 */
-	'app/inc/class-genese-wrapping.php',
+	'inc/class-genese-wrapping.php',
 	/**
 	 * Helper functions
 	 */
-	'app/inc/helpers.php',
+	'inc/helpers.php',
 	/**
 	 * Theme setup
 	 */
-	'app/inc/setup.php',
+	'inc/setup.php',
 	/**
 	 *  Custom template tags for this theme.
 	 */
-	'app/inc/template-tags.php',
+	'inc/template-tags.php',
 	/**
 	 * Implement the Custom Header feature.
 	 */
-	'app/inc/custom-header.php',
+	'inc/custom-header.php',
 	/**
 	 * Functions which enhance the theme by hooking into WordPress.
 	 */
-	'app/inc/template-functions.php',
+	'inc/template-functions.php',
 	/**
 	 * Customizer additions.
 	 */
-	'app/inc/customizer.php',
+	'inc/customizer.php',
 	/**
 	 * ACF Support
 	 */
@@ -75,22 +75,22 @@ unset($file, $filepath);
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
-	require 'app/inc/jetpack.php';
+	require 'inc/jetpack.php';
 }
 
 /**
  * Load WooCommerce compatibility file.
  */
 if ( class_exists( 'WooCommerce' ) ) {
-	require 'app/inc/woocommerce.php';
+	require 'inc/woocommerce.php';
 }
 
 /**
  * Load ACF compatibility file.
  */
-require 'app/inc/acf.php';
+require 'inc/acf.php';
 
 /**
  * Load TGM compatibility file.
  */
-require 'app/inc/required-plugins.php';
+require 'inc/required-plugins.php';

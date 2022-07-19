@@ -64,7 +64,7 @@ if ( ! function_exists( 'genese_setup' ) ) :
 		 *
 		 * @link http://codex.wordpress.org/Function_Reference/register_nav_menus.
 		 */
-		$nav_menus = require get_stylesheet_directory() . '/app/navigations.php';
+		$nav_menus = require get_stylesheet_directory() . '/inc/navigations.php';
 		if ( is_array( $nav_menus ) && ! empty( $nav_menus ) ) {
 			register_nav_menus( $nav_menus );
 		}
@@ -138,7 +138,7 @@ if ( ! function_exists('genese_register_post_types') ) :
 		 *
 		 * @link http://codex.wordpress.org/Function_Reference/register_nav_menus.
 		 */
-		$types = require get_stylesheet_directory() . '/app/custom-post-types.php';
+		$types = require get_stylesheet_directory() . '/inc/custom-post-types.php';
 		if ( is_array( $types ) ) {
 			foreach ($types as $post_type => $args) {
 				register_post_type($post_type, $args);
@@ -221,7 +221,7 @@ endif;
  */
 function genese_widgets_init() {
 
-	$sidebars = require get_stylesheet_directory() . '/app/sidebars.php';
+	$sidebars = require get_stylesheet_directory() . '/inc/sidebars.php';
 
 	foreach ( $sidebars as $sidebar ) {
 
