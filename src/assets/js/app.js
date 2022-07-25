@@ -13,10 +13,11 @@ const initializeApp = () => {
 	 */
 	const run = () => {
 		// Turn on smooth scroll.
-		scroll = new LocomotiveScroll({
-			el: document.querySelector("#main"),
-			smooth: true,
-		});
+		// scroll = new LocomotiveScroll({
+		// 	el: document.querySelector('[data-scroll-container]'),
+		// 	smooth: true,
+		// 	lerp: 0.1,
+		// });
 
 		// Turn on collapsed
 		// const collapseElementList = document.querySelectorAll(".collapse");
@@ -34,5 +35,5 @@ const initializeApp = () => {
 
 // Turn on the lights.
 const app = initializeApp();
-const page = HomePage(app);
+// const page = HomePage(app);
 document.addEventListener("DOMContentLoaded", app.run);

@@ -25,15 +25,15 @@
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 	<?php // wp_body_open(); ?>
-	<div id="app" class="" role="document" itemscope itemtype="http://schema.org/WebPage">
+	<div id="app" class="" role="document" itemscope itemtype="http://schema.org/WebPage" data-scroll-container>
 		<?php get_header(); ?>
-		<main id="main" class="main" role="main" itemprop="mainContentOfPage">
+		<main id="main" class="main" role="main" itemprop="mainContentOfPage" data-scroll-section>
 			<?php
 				/*
 				* Get the right WordPress template file.
