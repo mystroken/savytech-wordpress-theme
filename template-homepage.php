@@ -15,7 +15,7 @@
 while ( have_posts() ) :
 	the_post();
 
-	get_template_part( 'template-parts/content', 'homepage' );
+	get_template_part( 'templates/content', 'homepage' );
 
 endwhile; // End of the loop.
 

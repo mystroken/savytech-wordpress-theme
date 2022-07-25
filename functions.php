@@ -88,9 +88,9 @@ if ( class_exists( 'WooCommerce' ) ) {
 /**
  * Load ACF compatibility file.
  */
-require 'inc/acf.php';
+//require 'inc/acf.php';
 
 /**
  * Load TGM compatibility file.
  */
-require 'inc/required-plugins.php';
+//require 'inc/required-plugins.php';

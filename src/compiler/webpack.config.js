@@ -1,3 +1,4 @@
+const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
 
@@ -6,20 +7,19 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin').CleanWebpackPlugin;
 const NonJsEntryCleanupPlugin = require('./non-js-entry-cleanup-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 const { context, entry, devtool, outputFolder, publicFolder } = require('../config');
 
 const HMR = require('./hmr');
 const getPublicPath = require('./publicPath');
 
-module.exports = (options) => {
-  const { dev } = options;
+module.exports = ({ dev }) => {
   const hmr = HMR.getClient();
 
   return {
     mode: dev ? 'development' : 'production',
-    devtool: dev ?  devtool : false,
+    // devtool: dev ?  devtool : false,
+		devtool,
     context,
     entry: {
       'css/style': dev ? [hmr, entry.styles] : entry.styles,
@@ -36,7 +36,7 @@ module.exports = (options) => {
           test: /\.js$/,
           exclude: /(node_modules|bower_components)\/(?!(dom7|ssr-window|swiper)\/).*/,
           use: [
-            ...(dev ? [{ loader: 'cache-loader' }] : []),
+            // ...(dev ? [{ loader: 'cache-loader' }] : []),
             { loader: 'babel-loader' }
           ]
         },
@@ -44,10 +44,30 @@ module.exports = (options) => {
           test: /\.(sa|sc|c)ss$/,
           use: [
             ...(dev ? [{ loader: 'cache-loader' }, { loader: 'style-loader' }] : [MiniCssExtractWebpackPlugin.loader]),
-            { loader: 'css-loader', options: { sourceMap: dev } },
-            { loader: 'postcss-loader', options: { sourceMap: dev } },
-            { loader: 'resolve-url-loader', options: { sourceMap: dev } },
-            { loader: 'sass-loader', options: { sourceMap: dev } },
+            {
+							loader: 'css-loader',
+							options: {
+								sourceMap: true
+							},
+						},
+            {
+							loader: 'postcss-loader',
+							options: {
+								sourceMap: true
+							},
+						},
+            {
+							loader: 'resolve-url-loader',
+							options: {
+								sourceMap: true
+							},
+						},
+            {
+							loader: 'sass-loader',
+							options: {
+								sourceMap: true
+							},
+						},
           ]
         },
         {
@@ -56,7 +76,7 @@ module.exports = (options) => {
             {
               loader: 'file-loader',
               options: {
-                name: '[path][name].[ext]',
+                name: 'fonts/[name].[ext]',
               }
             }
           ]
@@ -78,21 +98,27 @@ module.exports = (options) => {
           includeSubfolders: true
         }),
 
-				// Removes/cleans build folders and unused assets when rebuilding
+				/**
+				 * Removes/cleans build folders and unused assets when rebuilding
+				 * @see https://github.com/johnagan/clean-webpack-plugin#options-and-defaults-optional
+				 */
         new CleanWebpackPlugin(),
 
-				// Copies files from target to destination folder
+				/**
+				 * Copies files from target to destination folder
+				 * @see https://webpack.js.org/plugins/copy-webpack-plugin/
+				 */
         new CopyWebpackPlugin({
 					patterns: [
 						{
             	from: `${context}/**/*`,
           	  to: outputFolder,
-							globOptions: {
-								dot: true,
-								gitignore: true,
-								ignore: [ '*.js', '*.ts', '*.sass', '*.scss', '*.css' ]
+							filter: async (resourcePath) => {
+								const toIgnore = [ '.js', '.ts', '.sass', '.scss', '.css' ];
+								const extension = path.extname(resourcePath);
+								return (toIgnore.indexOf(extension) <= -1);
 							},
-         	 }
+         	 },
 					],
 				})
       ])

@@ -16,41 +16,38 @@
 ?>
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?>>
+
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
+
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
-<div id="app" class="has-announcement" role="document" itemscope itemtype="http://schema.org/WebPage">
-
-	<section id="app-header" class="app-header">
+	<?php // wp_body_open(); ?>
+	<div id="app" class="" role="document" itemscope itemtype="http://schema.org/WebPage">
 		<?php get_header(); ?>
-	</section>
-
-	<section id="app-content" class="app-content">
 		<main id="main" class="main" role="main" itemprop="mainContentOfPage">
-			<div id="content" class="content">
-				<?php
-
-					/*
-					* Get the right WordPress template file.
-					*/
-					require genese_template_path();
-					?>
-			</div>
+			<?php
+				/*
+				* Get the right WordPress template file.
+				*/
+				require genese_template_path();
+			?>
 		</main>
 		<?php get_footer(); ?>
-	</section>
-
-</div>
-<div id="loader"></div>
-<noscript><div class="issue-js"><?php echo __('Please enable JavaScript to view this website.', 'genese'); ?></div></noscript>
-
-<?php wp_footer(); ?>
+	</div>
+	<div id="loader"></div>
+	<noscript>
+		<div class="issue-js"><?php echo __('Please enable JavaScript to view this website.', 'genese'); ?></div>
+	</noscript>
+	<?php wp_footer(); ?>
 </body>
+
 </html>
