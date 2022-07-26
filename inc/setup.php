@@ -191,7 +191,7 @@ if ( ! function_exists( 'genese_enqueue_scripts' ) ) :
 				'genese-style',
 				get_theme_file_uri( '/assets/css/style.css' ),
 				false,
-				filemtime( $css_file_uri ),
+				filemtime( $css_file_uri )
 			);
 
 			wp_enqueue_style( 'genese-style' );
