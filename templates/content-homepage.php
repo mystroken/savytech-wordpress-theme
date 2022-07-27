@@ -326,7 +326,7 @@
 						<div class="mb-3">
 							<input class="form-control" type="email" id="email-1" name="email" placeholder="Email">
 						</div>
-						
+
 						<div class="mb-3">
 							<textarea class="form-control" id="message-1" name="message" rows="6" placeholder="Message"></textarea>
 						</div>
