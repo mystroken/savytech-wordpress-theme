@@ -52,10 +52,20 @@
 	<?php wp_footer(); ?>
 
 	<script>
-	L.mapbox.accessToken = 'pk.eyJ1IjoibXlzdHJva2VuIiwiYSI6ImNqaXpxbG5qdTA5dmMzdm10M2FiaWkxazEifQ.ekGNF_Xslv2IhkrlMv3X7g';
-	var map = L.mapbox.map('map')
-		.setView([40, -74.50], 9)
-		.addLayer(L.mapbox.styleLayer('mapbox://styles/mapbox/streets-v11'));
+		L.mapbox.accessToken = 'pk.eyJ1IjoibXlzdHJva2VuIiwiYSI6ImNqaXpxbG5qdTA5dmMzdm10M2FiaWkxazEifQ.ekGNF_Xslv2IhkrlMv3X7g';
+		var map = L.mapbox.map('map', null, { zoomControl: false })
+			.setView([13.509831294, 2.116832866], 13)
+			.addLayer(L.mapbox.styleLayer('mapbox://styles/mapbox/streets-v11'));
+
+		// Disable drag and zoom handlers.
+		map.dragging.disable();
+		map.touchZoom.disable();
+		map.doubleClickZoom.disable();
+		map.scrollWheelZoom.disable();
+		map.keyboard.disable();
+
+		// Disable tap handler, if present.
+		if (map.tap) map.tap.disable();
 	</script>
 </body>
 </html>
