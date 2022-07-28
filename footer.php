@@ -29,13 +29,13 @@
 			<div class="col-lg-4">
 				<p style="font-size: 2rem;">
 					<a href="#" class="link-secondary">
-						<i class="ri-twitter-fill"></i>
+						<i class="bi bi-twitter"></i>
 					</a>
 					<a href="#" class="link-secondary">
 						<i class="bi bi-facebook"></i>
 					</a>
 					<a href="#" class="link-secondary">
-						<i class="ri-skype-fill"></i>
+						<i class="bi bi-skype"></i>
 					</a>
 				</p>
 			</div>

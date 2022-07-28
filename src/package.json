@@ -28,11 +28,11 @@
     "build": "node compiler/build"
   },
   "dependencies": {
+    "@mapbox/mapbox-sdk": "^0.13.4",
     "@popperjs/core": "^2.11.5",
     "bootstrap": "^5.2.0",
     "bootstrap-icons": "^1.9.1",
-    "locomotive-scroll": "^4.1.4",
-    "remixicon": "^2.5.0"
+    "locomotive-scroll": "^4.1.4"
   },
   "devDependencies": {
     "@babel/core": "^7.18.9",
