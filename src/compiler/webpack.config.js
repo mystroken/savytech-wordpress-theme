@@ -18,8 +18,7 @@ module.exports = ({ dev }) => {
 
   return {
     mode: dev ? 'development' : 'production',
-    // devtool: dev ?  devtool : false,
-		devtool,
+    devtool,
     context,
     entry: {
       'css/style': dev ? [hmr, entry.styles] : entry.styles,

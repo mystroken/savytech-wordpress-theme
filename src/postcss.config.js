@@ -19,10 +19,6 @@ module.exports = ({ options }) => ({
 		// your targeted browsers or runtime environments.
     'postcss-preset-env': {},
 
-    // To packing same CSS
-    // media query rules into one
-    'css-mqpacker': {},
-
     // Minify css on production
     'cssnano': options.dev ? false : {
       preset: ['default', {

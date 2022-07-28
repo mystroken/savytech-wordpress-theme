@@ -31,7 +31,8 @@
     "@popperjs/core": "^2.11.5",
     "bootstrap": "^5.2.0",
     "bootstrap-icons": "^1.9.1",
-    "locomotive-scroll": "^4.1.4"
+    "locomotive-scroll": "^4.1.4",
+    "remixicon": "^2.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.18.9",
@@ -43,7 +44,6 @@
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.1",
-    "css-mqpacker": "^7.0.0",
     "cssnano": "^5.1.12",
     "file-loader": "^6.2.0",
     "friendly-errors-webpack-plugin": "^1.7.0",
