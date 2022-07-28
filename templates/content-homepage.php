@@ -8,7 +8,7 @@
  */
 
 ?>
-<header class="hero py-5 bg-primary text-white">
+<header class="hero">
 	<div class="container">
 		<div class="hero-content">
 			<h1>
@@ -281,6 +281,13 @@
 									<p>yourmail@gmail.com</p>
 								</div>
 							</div>
+						</div>
+						<div class="col-12 col-md-6 col-xl-12">
+						<div class="card">
+							<div class="card-body">
+								This is some text within a card body.
+							</div>
+						</div>
 						</div>
 						<div class="col-12 col-md-6 col-xl-12">
 							<div class="contact-item">

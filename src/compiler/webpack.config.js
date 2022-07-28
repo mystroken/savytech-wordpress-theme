@@ -72,16 +72,11 @@ module.exports = ({ dev }) => {
         {
           test: /\.(ttf|otf|eot|woff2?|png|jpe?g|gif|svg|ico|mp4|webm)$/,
 					type: 'asset/resource',
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: 'fonts/[name].[ext]',
-              }
-            }
-          ]
-        }
-      ]
+          generator: {
+						filename: 'fonts/[hash][ext][query]'
+					},
+        },
+      ],
     },
     plugins: [
       ...(dev ? [

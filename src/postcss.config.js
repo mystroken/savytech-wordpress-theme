@@ -1,14 +1,5 @@
 module.exports = ({ options }) => ({
   plugins: {
-
-		// To inline @import rules content
-    // with extra features.
-		'postcss-easy-import': {
-      partial: true,
-      extensions: ['.sass', '.scss', '.css'],
-      glob: true,
-    },
-
     // To parse CSS and add vendor prefixes to CSS rules using
     // values from `Can I Use`. It is recommended by Google and
     // used in Twitter and Alibaba.
