@@ -26,6 +26,8 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+	<script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
+	<link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
 	<?php wp_head(); ?>
 </head>
 
@@ -48,6 +50,12 @@
 		<div class="issue-js"><?php echo __('Please enable JavaScript to view this website.', 'genese'); ?></div>
 	</noscript>
 	<?php wp_footer(); ?>
-</body>
 
+	<script>
+	L.mapbox.accessToken = 'pk.eyJ1IjoibXlzdHJva2VuIiwiYSI6ImNqaXpxbG5qdTA5dmMzdm10M2FiaWkxazEifQ.ekGNF_Xslv2IhkrlMv3X7g';
+	var map = L.mapbox.map('map')
+		.setView([40, -74.50], 9)
+		.addLayer(L.mapbox.styleLayer('mapbox://styles/mapbox/streets-v11'));
+	</script>
+</body>
 </html>

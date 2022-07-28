@@ -13,8 +13,8 @@
 		<div class="hero-content">
 			<h1>
 				<span>Votre</span><br>
-				<span>service</span><br>
-				<span>informatique</span>
+				<span>partenaire économique</span><br>
+				<span>B2C et B2B</span>
 			</h1>
 			<p>
 				Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac
@@ -262,6 +262,7 @@
 
 <section id="clients" class="clients"></section>
 
+<!-- Start: Contact Section -->
 <section id="contact" class="contact py-5">
 	<div class="container">
 		<div class="row">
@@ -336,4 +337,10 @@
 			</div>
 		</div>
 	</div>
+</section><!-- End: Contact Section -->
+
+<!-- Start: Map Section -->
+<section id="map-section" class="map-section">
+	<div id="map" class="map-container"></div>
 </section>
+<!-- End: Map Section -->
