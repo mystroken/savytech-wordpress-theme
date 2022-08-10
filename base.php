@@ -35,7 +35,7 @@
 	<?php // wp_body_open(); ?>
 	<div id="app" class="" role="document" itemscope itemtype="http://schema.org/WebPage" data-scroll-container>
 		<?php get_header(); ?>
-		<main id="main" class="main" role="main" itemprop="mainContentOfPage" data-scroll-section>
+		<main id="main" class="main" role="main" itemprop="mainContentOfPage">
 			<?php
 				/*
 				* Get the right WordPress template file.
