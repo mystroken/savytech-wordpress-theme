@@ -9,19 +9,21 @@
  */
 
 ?>
-<header class="hero" style="height: 1033px; background-color: transparent !important; background-repeat: no-repeat; background-image:
+<header class="hero" style="height: 900px; background-color: transparent !important; background-repeat: no-repeat; background-image:
 	url('<?php echo get_template_directory_uri(); ?>/assets/images/hero-background.png'); background-size:
 	cover; background-position: 50% 50%;" data-scroll-section>
 	<div class="container">
 		<div class="hero-content">
-			<h1>
+			<h1 class="hero-title">
 				<span>Votre</span><br>
-				<span>partenaire économique</span><br>
-				<span>B2C et B2B</span>
+				<span>partenaire économique B2C et B2B</span>
 			</h1>
-			<p>
-				Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac
-				facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.
+			<h2 class="hero-subtitle">
+				<span>Représentant</span><br>
+				<span>MERCURY-QUADIENT Niger</span>
+			</h2>
+			<p class="hero-copy">
+				SAVY-TECH est le partenaire de solution Fiscale et Postale de MERCURY-QUADIENT anciennement NEOPOST pour la République du Niger.
 			</p>
 			<div class="button">
 				<a href="/#contact" class="btn btn-secondary" role="button">En savoir plus</a>
@@ -335,7 +337,7 @@
 								</div>
 								<div class="contact-content">
 									<h4>Contact</h4>
-									<p>+227 (0) 383 766 284</p>
+									<p>+227 97 77 20 90</p>
 									<p>contact@savy-tech.com</p>
 								</div>
 							</div>
@@ -349,7 +351,7 @@
 								</div>
 								<div class="contact-content">
 									<h4>Adresse</h4>
-									<p>175 5th Ave, New York, NY 10010</p>
+									<p>Rue de l'independance, Niamey</p>
 									<p>Niger</p>
 								</div>
 							</div>

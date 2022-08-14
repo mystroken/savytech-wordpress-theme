@@ -22,7 +22,7 @@
 			<div class="col-lg-4 mb-5 mb-lg-0">
 				<div>
 					<p>Besoin d'aide?<br>Appelez-nous</p>
-					<h5 class="text-secondary">+227 (0) 383 766 284</h5>
+					<h5 class="text-secondary">+227 97 77 20 90</h5>
 					<p>Rue de l'indépendance<br>Niamey, Niger</p>
 				</div>
 			</div>

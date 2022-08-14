@@ -1,8 +1,6 @@
 import { Collapse } from "bootstrap";
-import LocomotiveScroll from "locomotive-scroll";
-import round from "@mystroken/g/round";
 
-import HomePage from "./pages/home";
+// import HomePage from "./pages/home";
 
 const initializeApp = () => {
 	/**
@@ -14,11 +12,11 @@ const initializeApp = () => {
 	 */
 	const run = () => {
 		// Turn on smooth scroll.
-		scroll = new LocomotiveScroll({
-			el: document.querySelector("[data-scroll-container]"),
-			smooth: true,
-			lerp: 0.1,
-		});
+		// scroll = new LocomotiveScroll({
+		// 	el: document.querySelector("[data-scroll-container]"),
+		// 	smooth: true,
+		// 	lerp: 0.1,
+		// });
 
 		// Listen scroll and hide or show navbar.
 		const watchNavbar = () => {
@@ -38,8 +36,8 @@ const initializeApp = () => {
 			function handleNavbarOnScroll() {
 				// First of all, let's make sure that we
 				// have scrolled from a significant amount before doing anything.
-				if (current <= delta) return; // When iOs bounce on top
-				if (current >= limit - window.innerHeight) return; // When iOs bounce on bottom
+				// if (current <= delta) return; // When iOs bounce on top
+				// if (current >= limit - window.innerHeight) return; // When iOs bounce on bottom
 
 				// Pull up when we scroll up
 				// Stick when the scroll amount is greater than the height
@@ -47,12 +45,16 @@ const initializeApp = () => {
 				navbar.classList.toggle("sticky", current > height);
 			}
 
+			function resize() {
+				limit = document.getElementById("#app").getBoundingClientRect().height
+			}
+
 			// Attach the event listener.
-			scroll.on("scroll", (args) => {
+			window.addEventListener('resize', resize)
+			window.addEventListener("scroll", () => {
 				// Keep current scroll details.
-				delta = Math.floor(args.delta.y - args.scroll.y);
-				current = args.scroll.y;
-				limit = args.limit.y;
+				current = window.scrollY;
+				delta = Math.abs(Math.floor(current - last));
 
 				if (!ticking) {
 					window.requestAnimationFrame(() => {
