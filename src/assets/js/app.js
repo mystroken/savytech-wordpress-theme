@@ -26,8 +26,8 @@ const initializeApp = () => {
 			let current = 0;
 			let limit = 0;
 			let ticking = false;
+			let navbarHeight = 0;
 			const navbar = document.getElementById("navbar");
-			const { height } = navbar.getBoundingClientRect();
 
 			/**
 			 * Set behaviors of
@@ -42,14 +42,16 @@ const initializeApp = () => {
 				// Pull up when we scroll up
 				// Stick when the scroll amount is greater than the height
 				navbar.classList.toggle("pull-up", current >= last);
-				navbar.classList.toggle("sticky", current > height);
+				navbar.classList.toggle("sticky", current > navbarHeight);
 			}
 
 			function resize() {
-				limit = document.getElementById("#app").getBoundingClientRect().height
+				limit = document.getElementById("app").getBoundingClientRect().height
+				navbarHeight = navbar.getBoundingClientRect().height
 			}
 
 			// Attach the event listener.
+			resize()
 			window.addEventListener('resize', resize)
 			window.addEventListener("scroll", () => {
 				// Keep current scroll details.

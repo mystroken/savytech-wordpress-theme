@@ -22,11 +22,12 @@
 		</button>
 		<div id="navbarSupportedContent" class="collapse navbar-collapse d-lg-flex justify-content-lg-end">
 			<ul class="navbar-nav mb-4 mb-lg-0 me-lg-4">
-				<li class="nav-item"><a class="nav-link active" href="/">Accueil</a></li>
+				<li class="nav-item"><a class="nav-link" href="/">Accueil</a></li>
+				<li class="nav-item"><a class="nav-link" href="/#about">A Propos</a></li>
 				<li class="nav-item"><a class="nav-link" href="/#services">Nos services</a></li>
 				<li class="nav-item"><a class="nav-link" href="/#pricing">Nos tarifs</a></li>
 			</ul>
-			<a class="btn btn-secondary" role="button" href="/#contact">
+			<a class="btn btn-sm btn-secondary" role="button" href="/#contact">
 				<span>Nous contacter</span>
 				<i class="icon-right-open"></i>
 			</a>
