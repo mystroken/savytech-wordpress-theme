@@ -268,12 +268,12 @@
 			</p>
 		</div>
 		<div class="section-content">
-			<a href="#"> <img class="m-3" src="<?php echo get_template_directory_uri(); ?>/assets/images/brands/instacart.png"></a>
-			<a href="#"> <img class="m-3" src="<?php echo get_template_directory_uri(); ?>/assets/images/brands/kickstarter.png"></a>
-			<a href="#"> <img class="m-3" src="<?php echo get_template_directory_uri(); ?>/assets/images/brands/lyft.png"></a>
-			<a href="#"> <img class="m-3" src="<?php echo get_template_directory_uri(); ?>/assets/images/brands/shopify.png"></a>
-			<a href="#"> <img class="m-3" src="<?php echo get_template_directory_uri(); ?>/assets/images/brands/pinterest.png"></a>
-			<a href="#"> <img class="m-3" src="<?php echo get_template_directory_uri(); ?>/assets/images/brands/twitter.png"></a>
+			<a href="#"><img class="m-3" src="<?php echo get_template_directory_uri(); ?>/assets/images/brands/instacart.png"></a>
+			<a href="#"><img class="m-3" src="<?php echo get_template_directory_uri(); ?>/assets/images/brands/kickstarter.png"></a>
+			<a href="#"><img class="m-3" src="<?php echo get_template_directory_uri(); ?>/assets/images/brands/lyft.png"></a>
+			<a href="#"><img class="m-3" src="<?php echo get_template_directory_uri(); ?>/assets/images/brands/shopify.png"></a>
+			<a href="#"><img class="m-3" src="<?php echo get_template_directory_uri(); ?>/assets/images/brands/pinterest.png"></a>
+			<a href="#"><img class="m-3" src="<?php echo get_template_directory_uri(); ?>/assets/images/brands/twitter.png"></a>
 		</div>
 	</div>
 </section><!-- Client Section: End -->
